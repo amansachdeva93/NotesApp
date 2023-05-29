@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "6671451a6d81633fd1f906c2227e51e67f84233701d35e13ae4ba9763e5bd35e"
+build_start_time: [1685339235, 332243919]
+build_end_time: [1685339235, 370593070]
+inputs:
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/AppDelegate.swift": !private [1685339227, 838112831]
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/SceneDelegate.swift": !private [1685339227, 843181133]
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/ViewController.swift": !private [1685339227, 844992637]
