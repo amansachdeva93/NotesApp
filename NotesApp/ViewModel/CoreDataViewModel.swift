@@ -28,12 +28,12 @@ class CoreDataViewModel: NSObject
         })
     }
     
-    func addNote(title: String, time: Double, completion: (Bool) -> Void)
+    func addNote(title: String, time: String, completion: (Bool) -> Void)
     {
        let entity = NoteEntity(context: container.viewContext)
         entity.title = title
         entity.time = time
-        entity.status = ""
+        entity.status = false
         if saveContext(){
             completion(true) //saved successfully
         }
@@ -56,7 +56,7 @@ class CoreDataViewModel: NSObject
     
     func updateNote(entity: NoteEntity, completion: (Bool) -> Void)
     {
-        entity
+        
         if saveContext()
         {
             completion(true)
@@ -85,8 +85,6 @@ class CoreDataViewModel: NSObject
                 try context.save()
                 return true
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 return false
             }

@@ -14,9 +14,73 @@
             filePath = "NotesApp/View/ViewControllers/AddTask.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "showAlert(msg:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2EBE063B-3102-4483-ADD8-7D2ED1811156"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NotesApp/View/Cells/NoteCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "configure()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2EBE063B-3102-4483-ADD8-7D2ED1811156 - 23e98d057f4edab1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NotesApp.NoteCell.configure() -&gt; ()"
+                  moduleName = "NotesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amanpreetsingh/Documents/Xcode%20Projects/NotesApp/NotesApp/View/Cells/NoteCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "3609">
+               </Location>
+               <Location
+                  uuid = "2EBE063B-3102-4483-ADD8-7D2ED1811156 - 23e98d057f4edab1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NotesApp.NoteCell.configure() -&gt; ()"
+                  moduleName = "NotesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amanpreetsingh/Documents/Xcode%20Projects/NotesApp/NotesApp/View/Cells/NoteCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "3673">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FC81C07-7785-457F-B177-FB22308C9A57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NotesApp/View/Cells/NoteCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "configure()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

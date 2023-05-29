@@ -556,4 +556,19 @@ extension Date {
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
+   
+}
+
+extension String
+{
+    func timeTo24Format() -> String
+    {
+        let dateAsString = self
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // fixes nil if device time in 24 hour format
+        let date = dateFormatter.date(from: dateAsString)
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: date ?? Date())
+    }
 }

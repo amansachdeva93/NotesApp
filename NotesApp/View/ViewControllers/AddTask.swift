@@ -14,34 +14,27 @@ class AddTask: UIViewController {
     @IBOutlet weak var tfAMPM: UITextField!
     
     let coreDataViewModel = CoreDataViewModel()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-   }
-    
-    @IBAction func actionSelectTime(_ sender: Any) {
-        selectTime()
-    }
-   
-    func selectTime()
+    var timeString: String?
+
+    func selectTime() //handling time selection bottom sheet
     {
-       
-        let currentDateTime: Date? = Date()
-        DatePicker.selectDate(title: "Select Time", cancelText: "Cancel",datePickerMode: .time,selectedDate: currentDateTime!, minDate: nil, minuteInterval: 1, didSelectDate: { [weak self](selectedDate) in
-            let timeString = String(selectedDate.dateString(DateFormates.hhmma.rawValue))
-            let t1 = timeString.replacingOccurrences(of: "AM", with: " ").replacingOccurrences(of: "PM", with: " ")
-            self?.tfTime.text = t1
-            self?.tfAMPM.text = timeString.contains("P") ? "PM" : "AM"
-            print(selectedDate)
-           /// self?.arrivalTime = selectedDate
-            //self?.startTimeField.text = selectedDate.dateString(DateFormates.hhmma.rawValue)
+        DatePicker.selectDate(title: "Select Time", cancelText: "Cancel",datePickerMode: .time,selectedDate: Date(), minDate: nil, minuteInterval: 1, didSelectDate: { [self](selectedDate) in
+            timeString = String(selectedDate.dateString(DateFormates.hhmma.rawValue))
+            let t1 = timeString!.replacingOccurrences(of: "AM", with: " ").replacingOccurrences(of: "PM", with: " ")
+            self.tfTime.text = t1
+            self.tfAMPM.text = self.timeString!.contains("P") ? "PM" : "AM"
         })
     }
    
+    //MARK:- IBActions
+    @IBAction func actionSelectTime(_ sender: Any) {
+        selectTime()
+    }
+    
     @IBAction func actionAdd(_ sender: Any) {
         if (tfTime.text?.count ?? 0 > 0) && tfAMPM.text?.count ?? 0 > 0 && tfTitle.text?.count ?? 0 > 0
         {
-            coreDataViewModel.addNote(title: (tfTitle.text ?? ""), time: 0.0)
+            coreDataViewModel.addNote(title: (tfTitle.text ?? ""), time: timeString ?? "")
             { isSaved in
                 if isSaved
                 {

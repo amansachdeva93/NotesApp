@@ -319,12 +319,6 @@ SWIFT_CLASS("_TtC8NotesApp6HomeVC")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC8NotesApp13HomeViewModel")
-@interface HomeViewModel : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UIButton;
 @class UIImageView;
 
@@ -337,6 +331,7 @@ SWIFT_CLASS("_TtC8NotesApp8NoteCell")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lblTitle;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (IBAction)actionCheck:(id _Nonnull)sender;
 - (void)actionDelete;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -355,15 +350,15 @@ SWIFT_CLASS_NAMED("NoteEntity")
 @interface NoteEntity (SWIFT_EXTENSION(NotesApp))
 @property (nonatomic) int16_t id;
 @property (nonatomic) BOOL status;
-@property (nonatomic) double time;
+@property (nonatomic, copy) NSString * _Nullable time;
 @property (nonatomic, copy) NSString * _Nullable title;
 @end
 
 @class UITraitCollection;
 @protocol UIViewControllerTransitionCoordinator;
 
-SWIFT_CLASS("_TtC8NotesApp17RPickerController")
-@interface RPickerController : UIViewController
+SWIFT_CLASS("_TtC8NotesApp16PickerController")
+@interface PickerController : UIViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
@@ -377,7 +372,7 @@ SWIFT_CLASS("_TtC8NotesApp17RPickerController")
 @class UIPickerView;
 @class UIView;
 
-@interface RPickerController (SWIFT_EXTENSION(NotesApp)) <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface PickerController (SWIFT_EXTENSION(NotesApp)) <UIPickerViewDataSource, UIPickerViewDelegate>
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nonnull)pickerView:(UIPickerView * _Nonnull)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView * _Nullable)view SWIFT_WARN_UNUSED_RESULT;
@@ -402,10 +397,15 @@ SWIFT_CLASS("_TtC8NotesApp13SceneDelegate")
 
 SWIFT_CLASS("_TtC8NotesApp8TaskList")
 @interface TaskList : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lblNoEntries;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lblWarning;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewBlack;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewPopUp;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableNotes;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified lblFab;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)actionAddNote;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -19,7 +19,7 @@ extension NoteEntity {
 
     @NSManaged public var id: Int16
     @NSManaged public var status: Bool
-    @NSManaged public var time: Double
+    @NSManaged public var time: String?
     @NSManaged public var title: String?
 
 }

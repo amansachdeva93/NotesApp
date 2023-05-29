@@ -9,18 +9,14 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    private var viewModel = HomeViewModel()
-    
     @IBOutlet weak var lblHeading: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let coreData = CoreDataViewModel()
-        animate()
-        // Do any additional setup after loading the view.
+        animateLabel()
     }
     
-    func animate()
+    func animateLabel()
     {
         self.lblHeading.transform =
         CGAffineTransformMakeTranslation(0, 1000)
