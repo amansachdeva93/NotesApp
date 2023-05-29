@@ -265,7 +265,6 @@ SWIFT_CLASS("_TtC8NotesApp7AddTask")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified tfTitle;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified tfTime;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified tfAMPM;
-- (void)viewDidLoad;
 - (IBAction)actionSelectTime:(id _Nonnull)sender;
 - (IBAction)actionAdd:(id _Nonnull)sender;
 - (IBAction)actionCancel:(id _Nonnull)sender;
@@ -314,7 +313,7 @@ typedef SWIFT_ENUM(NSInteger, DatePickerStyle, closed) {
 SWIFT_CLASS("_TtC8NotesApp6HomeVC")
 @interface HomeVC : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lblHeading;
-- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)actionAddTask:(id _Nonnull)sender;
 - (IBAction)actionLoadList:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

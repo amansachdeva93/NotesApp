@@ -1,15 +1,15 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "6671451a6d81633fd1f906c2227e51e67f84233701d35e13ae4ba9763e5bd35e"
-build_start_time: [1685372136, 653607845]
-build_end_time: [1685372137, 597293853]
+build_start_time: [1685373126, 152994155]
+build_end_time: [1685373126, 986493110]
 inputs:
   "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/AppDelegate.swift": [1685361893, 682526588]
   "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/SceneDelegate.swift": [1685342807, 121832370]
-  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/Utility/DatePicker.swift": [1685365623, 174479961]
-  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/Cells/NoteCell.swift": [1685371991, 661917209]
-  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/ViewControllers/AddTask.swift": [1685366271, 715480327]
-  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/ViewControllers/HomeVC.swift": [1685364213, 39753913]
-  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/ViewControllers/TaskList.swift": [1685372136, 511070013]
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/Utility/DatePicker.swift": [1685372392, 805619716]
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/Cells/NoteCell.swift": [1685372392, 840184926]
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/ViewControllers/AddTask.swift": [1685373050, 160494565]
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/ViewControllers/HomeVC.swift": [1685373125, 949095249]
+  "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/View/ViewControllers/TaskList.swift": [1685373050, 148845195]
   "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/NotesApp/ViewModel/CoreDataViewModel.swift": [1685368948, 97217559]
   ? "/Users/amanpreetsingh/Documents/Xcode Projects/NotesApp/build/NotesApp.build/Debug-iphonesimulator/NotesApp.build/DerivedSources/CoreDataGenerated/NotesApp/NoteEntity+CoreDataClass.swift"
   : [1685364689, 434967994]

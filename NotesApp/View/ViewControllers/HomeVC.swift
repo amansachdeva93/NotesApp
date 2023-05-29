@@ -11,16 +11,15 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var lblHeading: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
         animateLabel()
     }
     
     func animateLabel()
     {
+        lblHeading.alpha = 0.0
         self.lblHeading.transform =
         CGAffineTransformMakeTranslation(0, 1000)
-        lblHeading.alpha = 0.6
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear,  animations: { [self] in
             self.lblHeading.alpha = 1.0
             self.lblHeading.transform =
