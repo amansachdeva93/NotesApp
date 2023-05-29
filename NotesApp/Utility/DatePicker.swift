@@ -88,14 +88,14 @@ enum PickerType {
                           selectedIndex: Int? = nil,
                           type: PickerType = .date,
                           style: DatePickerStyle = .Wheel,
-                          minuteInterval: Int = 1) -> RPickerController? {
+                          minuteInterval: Int = 1) -> PickerController? {
         
         
         if let cc = UIWindow.currentController?.tabBarController {
             if DatePicker.sharedInstance.isPresented == false {
                 DatePicker.sharedInstance.isPresented = true
                 
-                let vc = RPickerController(title: title, cancelText: cancelText, doneText: doneText, datePickerMode: datePickerMode, selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, dataArray: dataArray, selectedIndex: selectedIndex, type: type, style: style, minuteInterval: minuteInterval)
+                let vc = PickerController(title: title, cancelText: cancelText, doneText: doneText, datePickerMode: datePickerMode, selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, dataArray: dataArray, selectedIndex: selectedIndex, type: type, style: style, minuteInterval: minuteInterval)
                 
                 vc.modalPresentationStyle = .overCurrentContext
                 vc.modalTransitionStyle = .crossDissolve
@@ -111,7 +111,7 @@ enum PickerType {
             if DatePicker.sharedInstance.isPresented == false {
                 DatePicker.sharedInstance.isPresented = true
                 
-                let vc = RPickerController(title: title, cancelText: cancelText, doneText: doneText, datePickerMode: datePickerMode, selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, dataArray: dataArray, selectedIndex: selectedIndex, type: type, style: style, minuteInterval: minuteInterval)
+                let vc = PickerController(title: title, cancelText: cancelText, doneText: doneText, datePickerMode: datePickerMode, selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, dataArray: dataArray, selectedIndex: selectedIndex, type: type, style: style, minuteInterval: minuteInterval)
                 
                 vc.modalPresentationStyle = .overCurrentContext
                 vc.modalTransitionStyle = .crossDissolve
@@ -148,7 +148,7 @@ private extension UIView {
     }
 }
 
-class RPickerController: UIViewController {
+class PickerController: UIViewController {
     
     //MARK:- Public closuers
     var onDateSelected : ((_ date: Date) -> Void)?
@@ -478,7 +478,7 @@ class RPickerController: UIViewController {
 
 //MARK:- UIPickerViewDataSource, UIPickerViewDelegate
 
-extension RPickerController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension PickerController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int { return 1 }
     
