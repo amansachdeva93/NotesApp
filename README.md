@@ -1,5 +1,15 @@
 # NotesApp
-Saving notes locally MVVM
+Saving notes locally: 
+- MVVM
+- Core Data
+- UIKit
+- UITableView
+- completion handlers
+- callbacks
+- Attributed Text to add strikethrough
+- Supported Dark/Light themes
+
+
 https://ibb.co/rtjpZNz
 
 <figure class="image">
