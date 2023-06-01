@@ -8,6 +8,7 @@ Saving notes locally:
 - callbacks
 - Attributed Text to add strikethrough
 - Supported Dark/Light themes
+- Add Calendar Date to select hour minute
 
 
 https://ibb.co/rtjpZNz
